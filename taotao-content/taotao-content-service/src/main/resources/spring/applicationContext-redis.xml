@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+	<!-- 解决扫描不到注解的问题，只需测试时开启，不用时关闭。 -->
+	<!-- <context:annotation-config></context:annotation-config> -->
+	
+	<!-- 单机版和集群版 只能存在一个 -->
+	<!-- 配置单机版的 -->
+	<bean class="redis.clients.jedis.JedisPool">
+		<!-- 以下只能有一个，用一注释其他 -->
+		<!-- vm虚拟机的redis-->
+		<constructor-arg name="host" value="192.168.25.131"></constructor-arg> 
+		
+		<!-- windows下的redis 
+		<constructor-arg name="host" value="127.0.0.1"></constructor-arg>-->
+		
+		<!-- 我的阿里云服务器上的redis 
+		<constructor-arg name="host" value="47.102.43.150"></constructor-arg>-->
+        <!-- 端口号 -->
+		<constructor-arg name="port" value="6379"></constructor-arg>
+	</bean>
+	<bean class="com.taotao.content.jedis.JedisClientPool"></bean>
+	
+	<!-- 配置集群版 -->
+	<!-- <bean class="redis.clients.jedis.JedisCluster"> <constructor-arg name="nodes"> 
+		<set> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="192.168.25.131"></constructor-arg> <constructor-arg name="port" value="7001"></constructor-arg> 
+		</bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="192.168.25.131"></constructor-arg> <constructor-arg name="port" value="7002"></constructor-arg> 
+		</bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="192.168.25.131"></constructor-arg> <constructor-arg name="port" value="7003"></constructor-arg> 
+		</bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="192.168.25.131"></constructor-arg> <constructor-arg name="port" value="7004"></constructor-arg> 
+		</bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="192.168.25.131"></constructor-arg> <constructor-arg name="port" value="7005"></constructor-arg> 
+		</bean> <bean class="redis.clients.jedis.HostAndPort"> <constructor-arg name="host" 
+		value="192.168.25.131"></constructor-arg> <constructor-arg name="port" value="7006"></constructor-arg> 
+		</bean> </set> </constructor-arg> </bean> <bean class="com.taotao.content.jedis.JedisClientCluster"></bean> -->
+
+</beans>

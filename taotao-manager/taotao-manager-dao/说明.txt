@@ -1,0 +1,6 @@
+taotao-manager-dao：存放逆向工程生成的mapper动态代理方式的关于所有数据的dao层
+继承自taotao-parent
+jar包工程
+
+引入：
+   taotao-manager-pojo

@@ -1,0 +1,7 @@
+taotao-search-interface：商品搜索功能的service接口
+继承自taotao-search
+jar包工程
+
+引入：
+   taotao-manager-pojo
+   taotao-common

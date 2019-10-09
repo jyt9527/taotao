@@ -1,0 +1,11 @@
+taotao-search-web：商品搜索功能实现的web工程：
+继承自taotao-parent
+war项目
+端口号：8085
+
+引入：
+   taotao-search-interface
+   
+实现功能：
+   利用solr实现对商品的搜索
+   全局异常处理

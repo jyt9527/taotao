@@ -1,0 +1,19 @@
+taotao-search-service：商品搜索功能的service实现类
+继承自taotao-search
+war包工程
+
+引入：
+   taotao-search-interface
+
+包含：
+   导入商品数据到solr缓存的dao层和mapper
+   根据搜索的条件，查询商品数据
+   
+实现功能：
+    导入所有的商品数据到索引库中
+    根据查询条件查询,根据搜索的条件搜索的结果（使用solr）
+    solr单机版和solrcloud集群版
+    
+    商品的添加/修改，删除的时候，同步索引库
+    引入消息中间件ActiveMQ
+    消息的接收方

@@ -1,0 +1,20 @@
+taotao-manager-service：service实现类：实现商品分类、商品的增删改查的工程
+继承自taotao-parent
+war包工程
+
+引入
+   taotao-manager-dao
+   taotao-manager-interface
+   
+实现功能：
+     ItemCatServiceImpl
+        查询商品分类，生成EasyUI的节点
+     ItemServiceImpl
+        查询所有商品
+        更新商品
+        删除商品（更新商品的状态）
+        增加商品
+       
+       商品的添加/修改，删除的时候，同步索引库
+            引入消息中间件ActiveMQ
+            消息的发送方

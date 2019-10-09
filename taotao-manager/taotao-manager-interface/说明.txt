@@ -1,0 +1,6 @@
+taotao-manager-interface：存放商品管理的service相关接口
+继承自taotao-parent
+jar包工程
+
+引入
+   taotao-manager-pojo

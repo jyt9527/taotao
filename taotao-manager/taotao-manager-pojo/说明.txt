@@ -1,0 +1,3 @@
+taotao-manager-pojo：存放逆向工程生成的pojo
+继承自taotao-parent
+jar包工程

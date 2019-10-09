@@ -1,0 +1,15 @@
+taotao-search：商品搜索功能的实现
+继承自taotao-parent
+pom聚合工程
+端口号：8084
+
+引入：
+    taotao-common
+
+包含：
+    taotao-search-interface：商品搜索功能的service接口
+    taotao-search-service：商品搜索功能的service实现类
+
+实现功能：
+    导入所有的商品数据到索引库中
+    根据查询条件查询,根据搜索的条件搜索的结果（使用solr索引库）

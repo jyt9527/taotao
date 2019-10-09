@@ -1,0 +1,16 @@
+taotao-item-web：商品详情页（最后再加入缓存，以提高效率），学习网页静态化工具freemarker
+继承自taotao-parent
+war工程
+tomcat端口号：8086
+
+1、商品详情页
+
+用户在门户网站上搜索商品，搜到之后，点击进入商品详情页
+        具体的业务逻辑是taotao-manager-interface和taotao-manager-service实现service层的业务逻辑
+        然后再在这个项目中通过dubbo引入taotao-manager-service，实现商品详情页的需求
+        
+        把商品详情页数库添加到redis缓存，以提高访问效率
+        
+2、学习如何在项目中使用freemarker，利用freemarker生成静态界面，提高访问商品详情页的效率
+  
+        

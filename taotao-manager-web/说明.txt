@@ -1,0 +1,21 @@
+taotao-manager-web：后台管理的项目
+继承自taotao-parent
+war包工程
+端口号：8081
+引入：
+   taotao-search-interface
+   taotao-manager-interface
+   taotao-content-interface
+   
+实现功能：
+   显示淘淘商城的后台管理界面
+    实现对商品分类的管理  
+        获取所有商品分类
+    实现对商品的管理
+         增删改查
+    实现对内容分类的管理
+          获取所有内容分类
+    实现对内容的管理
+          增删改查
+    实现对solr索引的管理
+           一键把所有的商品数据导入的solr的缓存中去

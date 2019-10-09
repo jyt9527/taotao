@@ -1,0 +1,15 @@
+taotao-manager：商品管理、mybatis逆向工程生成的dao层和pojo
+继承自taotao-parent
+pom聚合工程
+tomcat端口号：8080
+
+
+包含内容:
+     taotao-manager-dao：存放逆向工程生成的mapper动态代理方式的关于所有数据的dao层
+     taotao-manager-interface：存放商品管理的service相关接口
+     taotao-manager-pojo：存放逆向工程生成的pojo
+     taotao-manager-service：service实现类：实现商品分类、商品的增删改查的工程
+    
+实现功能：
+     对商品分类的查询
+     对商品的增删改查

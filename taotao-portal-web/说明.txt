@@ -1,0 +1,14 @@
+taotao-portal-web：门户系统的web项目
+继承自taotao-parent
+war包项目
+端口号：8082
+
+引入：
+   taotao-content-interface
+
+包含内容：
+
+    门户网站的实现
+    首页轮播图的展示：使用redis缓存的形式展示
+     pojo：Ad1Node：首页大广告位轮播图数据展示POJO， 根据前端json需要的图片格式所写
+    商品搜索功能的入口

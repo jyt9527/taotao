@@ -1,0 +1,15 @@
+taotao-common：淘淘商城项目的公共pojo和公共util的maven项目工程
+继承自taotao-parent
+jar包工程
+
+包含内容：
+ pojo
+     TaotaoResult：controller返回的响应的实体类
+     EasyUIDataGridResult：响应的json数据格式EasyUIDataGridResult，商品列表查询的返回的数据类
+     EasyUITreeNode：商品类目选择，tree 控件的节点的pojo
+     SearchItem：搜索的商品数据的POJO
+     SearchResult：商品搜索的分页信息结果对象
+ util
+     IDUtils：ID相关生成的方法的类
+     JsonUtils：Json数据与...之间的转换的方法的类
+     CookieUtils:
